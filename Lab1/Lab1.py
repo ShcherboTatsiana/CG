@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import colorchooser
-import colorsys as cs
 
 # Functions
 def rgb_to_hls(r, g, b):
