@@ -93,16 +93,12 @@ def process_image():
     
     if process_type == 'Линейное контрастирование':
         result = linear_contrast(image)
-
     elif process_type == 'Эквализация гистограммы (RGB)':
         result = histogram_equalization_rgb(image)
-
     elif process_type == 'Эквализация гистограммы (HSV)':
         result = histogram_equalization_hsv(image)
-
     elif process_type == 'Оригинальное изображение':
         result = orig_image
-
     else:
         return
 
