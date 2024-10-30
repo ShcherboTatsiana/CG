@@ -62,7 +62,7 @@ def histogram_equalization_rgb(image):
 def histogram_equalization_hsv(image):
     img_hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
     channels = cv2.split(img_hsv)
-    cv2.equalizeHist(channels[2], channels[2])  # Эквализация V
+    cv2.equalizeHist(channels[2], channels[2])  
     return cv2.cvtColor(cv2.merge(channels), cv2.COLOR_HSV2BGR)
 
 def sharpen_image(image, alpha):
@@ -138,17 +138,20 @@ method_combobox.set("Выберите метод")
 method_combobox.pack(side=tk.TOP, padx=5)
 method_combobox['state'] = 'readonly'
 
-process_button = tk.Button(button_frame, text="Обработать изображение", command=process_image)
+process_button = tk.Button(button_frame, text="Обработать изображение",
+                        command=process_image)
 process_button.pack(side=tk.TOP, padx=5)
 
 sharpness_label = tk.Label(button_frame, text="Уровень резкости")
 sharpness_label.pack(side=tk.TOP, padx=5)
 
-sharpness_scale = tk.Scale(button_frame, from_=-1, to=5, resolution=0.1, orient=tk.HORIZONTAL, length=300)
+sharpness_scale = tk.Scale(button_frame, from_=-1, to=5, resolution=0.1,
+                        orient=tk.HORIZONTAL, length=300)
 sharpness_scale.set(1)
 sharpness_scale.pack(side=tk.TOP, padx=5)
 
-sharpen_button = tk.Button(button_frame, text="Применить увеличение резкости", command=apply_sharpening)
+sharpen_button = tk.Button(button_frame, text="Применить увеличение резкости",
+                        command=apply_sharpening)
 sharpen_button.pack(side=tk.LEFT, padx=(5, 2), pady=10)
 
 image_frame = tk.Frame(root)
