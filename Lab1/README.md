@@ -4,4 +4,4 @@ Lab1 - это лабораторная №1, написанная в рамка 
 
 ## Превью
 
-<img src="Lab1/Lab1WebAppImg.png" alt="Вид веб-приложения">
+<img src="CG/Lab1/Lab1WebAppImg.png" alt="Вид веб-приложения">
